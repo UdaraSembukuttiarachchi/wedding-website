@@ -23,7 +23,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 2,
-      src: "/gallery/gallery2.jpg",
+      src: "/gallery/gallery2.JPG",
       alt: "First concert together",
       caption: "Our first concert together - Naadhagama"
     },
@@ -35,13 +35,13 @@ const Gallery: React.FC = () => {
     },
     {
       id: 4,
-      src: "/gallery/gallery4.jpg",
+      src: "/gallery/gallery4.JPG",
       alt: "Toastmasters",
       caption: "Two Toastmasters together"
     },
     {
       id: 5,
-      src: "/gallery/gallery5.jpg",
+      src: "/gallery/gallery5.JPG",
       alt: "In Love",
       caption: "In love forever..."
     }
