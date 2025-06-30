@@ -1,5 +1,6 @@
 import WeddingLanding from '../components/WeddingLanding';
 import OurStory from '@/components/OurStory';
+import Gallery from '@/components/Gallery';
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
       {/* Our Story section */}
       <OurStory tiktokVideoId="7447758598588992784"/>
       
-      {/* Other sections */}
+      {/* Gallery sections */}
+      <Gallery />
     </div>
   );
 }

@@ -246,7 +246,7 @@ const WeddingLanding: React.FC = () => {
         </div>
 
         {/* Welcome Message Section - Now Integrated */}
-        <div className="relative z-10 bg-gradient-to-br from-amber-50 to-stone-50 backdrop-blur-sm mx-6 mb-8 rounded-lg shadow-lg">
+        <div className="relative z-10 bg-white/95 backdrop-blur-sm mx-6 mb-8 rounded-lg shadow-lg">
           <div className="py-12 md:py-16 px-6">
             <div className="max-w-3xl mx-auto text-center">
               <div className="mb-6">
