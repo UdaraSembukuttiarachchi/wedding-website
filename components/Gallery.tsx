@@ -17,13 +17,13 @@ const Gallery: React.FC = () => {
   const images: GalleryImage[] = [
     {
       id: 1,
-      src: "/gallery/gallery1.jpg?w=800&h=600&fit=crop",
+      src: "/gallery/gallery1.jpg",
       alt: "First date",
       caption: "Our first date/not-a-date"
     },
     {
       id: 2,
-      src: "/gallery/gallery2.jpg?w=800&h=600&fit=crop",
+      src: "/gallery/gallery2.jpg",
       alt: "First concert together",
       caption: "Our first concert together - Naadhagama"
     },
@@ -35,13 +35,13 @@ const Gallery: React.FC = () => {
     },
     {
       id: 4,
-      src: "/gallery/gallery4.jpg?w=800&h=600&fit=crop",
+      src: "/gallery/gallery4.jpg",
       alt: "Toastmasters",
       caption: "Two Toastmasters together"
     },
     {
       id: 5,
-      src: "/gallery/gallery5.jpg?w=800&h=600&fit=crop",
+      src: "/gallery/gallery5.jpg",
       alt: "In Love",
       caption: "In love forever..."
     }
