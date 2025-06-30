@@ -143,19 +143,34 @@ const WeddingLanding: React.FC = () => {
           <div className="text-center max-w-4xl mx-auto">
             {/* Couple Names */}
             <div className="mb-6 animate-fade-in">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 tracking-wide drop-shadow-lg">
-                PANSILU
+              <h1
+                className="text-8xl md:text-6xl lg:text-7xl text-white mb-4 tracking-wide drop-shadow-lg"
+                style={{
+                  fontFamily: "Dancing Script, Brush Script MT, cursive",
+                }}
+              >
+                Pansilu
               </h1>
               <div className="flex items-center justify-center mb-4">
                 <div className="w-12 md:w-16 h-px bg-amber-300"></div>
                 <Heart className="mx-4 text-amber-400 w-5 h-5 md:w-6 md:h-6 animate-pulse drop-shadow-lg" />
                 <div className="w-12 md:w-16 h-px bg-amber-300"></div>
               </div>
-              <p className="text-2xl md:text-3xl lg:text-4xl font-light text-amber-200 italic mb-4 drop-shadow-lg">
-                and
+              <p
+                className="text-4xl md:text-3xl lg:text-4xl text-amber-200 italic mb-4 drop-shadow-lg"
+                style={{
+                  fontFamily: "Dancing Script, Brush Script MT, cursive",
+                }}
+              >
+                &
               </p>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white tracking-wide drop-shadow-lg">
-                UDARA
+              <h1
+                className="text-8xl md:text-6xl lg:text-7xl text-white tracking-wide drop-shadow-lg"
+                style={{
+                  fontFamily: "Dancing Script, Brush Script MT, cursive",
+                }}
+              >
+                Udara
               </h1>
             </div>
 
@@ -183,39 +198,39 @@ const WeddingLanding: React.FC = () => {
               </div>
             </div>
 
-            {/* Countdown Timer - More Responsive */}
+            {/* Countdown Timer - Mobile Responsive Single Line */}
             <div className="mb-8 animate-slide-up">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-sm md:max-w-lg mx-auto">
-                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-3 md:p-4">
-                  <div className="text-xl md:text-2xl lg:text-3xl font-light text-white">
+              <div className="grid grid-cols-4 gap-2 md:gap-6 max-w-xs sm:max-w-sm md:max-w-lg mx-auto">
+                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-4">
+                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.days}
                   </div>
                   <div className="text-xs md:text-sm text-amber-200 uppercase tracking-wide">
                     Days
                   </div>
                 </div>
-                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-3 md:p-4">
-                  <div className="text-xl md:text-2xl lg:text-3xl font-light text-white">
+                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-4">
+                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.hours}
                   </div>
                   <div className="text-xs md:text-sm text-amber-200 uppercase tracking-wide">
                     Hours
                   </div>
                 </div>
-                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-3 md:p-4">
-                  <div className="text-xl md:text-2xl lg:text-3xl font-light text-white">
+                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-4">
+                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.minutes}
                   </div>
                   <div className="text-xs md:text-sm text-amber-200 uppercase tracking-wide">
-                    Minutes
+                    Mins
                   </div>
                 </div>
-                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-3 md:p-4">
-                  <div className="text-xl md:text-2xl lg:text-3xl font-light text-white">
+                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-4">
+                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.seconds}
                   </div>
                   <div className="text-xs md:text-sm text-amber-200 uppercase tracking-wide">
-                    Seconds
+                    Secs
                   </div>
                 </div>
               </div>
@@ -231,7 +246,7 @@ const WeddingLanding: React.FC = () => {
         </div>
 
         {/* Welcome Message Section - Now Integrated */}
-        <div className="relative z-10 bg-white/95 backdrop-blur-sm mx-6 mb-8 rounded-lg shadow-lg">
+        <div className="relative z-10 bg-gradient-to-br from-amber-50 to-stone-50 backdrop-blur-sm mx-6 mb-8 rounded-lg shadow-lg">
           <div className="py-12 md:py-16 px-6">
             <div className="max-w-3xl mx-auto text-center">
               <div className="mb-6">
