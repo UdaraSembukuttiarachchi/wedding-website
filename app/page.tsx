@@ -1,6 +1,8 @@
 import WeddingLanding from '../components/WeddingLanding';
 import OurStory from '@/components/OurStory';
 import Gallery from '@/components/Gallery';
+import WeddingDetails from '@/components/WeddingDetails';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -15,6 +17,12 @@ export default function Home() {
       
       {/* Gallery sections */}
       <Gallery />
+
+      {/* Wedding Details sections */}
+      <WeddingDetails />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
