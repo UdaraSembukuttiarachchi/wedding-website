@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MapPin, Clock, Calendar, Phone, Car, Heart } from "lucide-react";
+import { MapPin, Clock, Calendar, Phone, Car, Heart, Shirt } from "lucide-react";
 
 const WeddingDetails: React.FC = () => {
   const detailCards = [
@@ -21,6 +21,14 @@ const WeddingDetails: React.FC = () => {
       items: [
         { icon: MapPin, text: "Eagles Lagoon View, Katunayake" },
         { icon: Car, text: "Ample parking available" },
+      ],
+    },
+    {
+      id: 3,
+      icon: Shirt,
+      title: "Dress Code",
+      items: [
+        { icon: Shirt, text: "Formal attire requested" },
       ],
     },
   ];
@@ -49,7 +57,7 @@ const WeddingDetails: React.FC = () => {
         </div>
 
         {/* Clean Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {detailCards.map((card) => (
             <div
               key={card.id}
@@ -74,6 +82,15 @@ const WeddingDetails: React.FC = () => {
                   </div>
                 ))}
               </div>
+              
+              {/* Special styling for dress code card */}
+              {card.id === 3 && (
+                <div className="mt-6">
+                  <p className="text-stone-600 text-sm leading-relaxed italic">
+                    Please dress to impress while keeping comfort in mind. We look forward to seeing you looking your best as we make timeless memories together!
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -89,7 +106,7 @@ const WeddingDetails: React.FC = () => {
 
           <div className="rounded-xl overflow-hidden border border-stone-200">
             <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCOivli0gfql5Es4PEJhZze8u4O28emDgs&q=Eagles+Lagoon+View,Katunayake,Sri+Lanka"
+              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=Eagles+Lagoon+View,Katunayake,Sri+Lanka`}
               width="100%"
               height="400"
               style={{ border: 0 }}
