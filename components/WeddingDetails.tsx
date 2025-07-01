@@ -29,7 +29,7 @@ const WeddingDetails: React.FC = () => {
     <section
       className="relative py-20 px-4 sm:px-6 lg:px-8 min-h-screen"
       style={{
-        backgroundImage: `linear-gradient(rgba(178, 172, 136, 0.7), rgba(178, 172, 136, 0.6)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
+        backgroundImage: `linear-gradient(rgba(178, 172, 136, 0.7), rgba(178, 172, 136, 0.6)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMJA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -89,7 +89,7 @@ const WeddingDetails: React.FC = () => {
 
           <div className="rounded-xl overflow-hidden border border-stone-200">
             <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-5JvhHH7LtfR2GFN9HJfT58DyT2eo5OM&q=Eagles+Lagoon+View,Katunayake,Sri+Lanka"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCOivli0gfql5Es4PEJhZze8u4O28emDgs&q=Eagles+Lagoon+View,Katunayake,Sri+Lanka"
               width="100%"
               height="400"
               style={{ border: 0 }}
@@ -114,29 +114,50 @@ const WeddingDetails: React.FC = () => {
             <h3 className="text-2xl font-light text-stone-800">Get in Touch</h3>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-8 mb-8">
-            {[
-              { name: "Pansilu", phone: "+94 76 925 6562" },
-              { name: "Udara", phone: "+94 76 715 6072" },
-            ].map((contact, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-green-800 font-medium text-xl">
-                    {contact.name[0]}
-                  </span>
-                </div>
-                <h4 className="text-xl font-medium text-stone-800 mb-2">
-                  {contact.name}
-                </h4>
-                <a
-                  href={`tel:${contact.phone.replace(/\s/g, "")}`}
-                  className="inline-flex items-center text-green-700 hover:text-green-800 transition-colors duration-200 bg-green-50 hover:bg-green-100 px-4 py-2 rounded-full"
-                >
-                  <Phone className="w-4 h-4 mr-2" />
-                  <span>{contact.phone}</span>
-                </a>
+          <div className="grid sm:grid-cols-3 gap-8 mb-8 sm:items-center">
+            {/* Pansilu's Contact */}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-green-800 font-medium text-xl">P</span>
               </div>
-            ))}
+              <h4 className="text-xl font-medium text-stone-800 mb-2">
+                Pansilu
+              </h4>
+              <a
+                href="tel:+94769256562"
+                className="inline-flex items-center text-green-700 hover:text-green-800 transition-colors duration-200 bg-green-50 hover:bg-green-100 px-4 py-2 rounded-full"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                <span>+94 76 925 6562</span>
+              </a>
+            </div>
+
+            {/* Separator Line */}
+            <div className="hidden sm:flex items-center justify-center">
+              <div className="w-px h-24 bg-stone-300"></div>
+            </div>
+            
+            {/* Mobile Separator */}
+            <div className="sm:hidden flex justify-center my-4 col-span-full">
+              <div className="w-24 h-px bg-stone-300"></div>
+            </div>
+
+            {/* Udara's Contact */}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-green-800 font-medium text-xl">U</span>
+              </div>
+              <h4 className="text-xl font-medium text-stone-800 mb-2">
+                Udara
+              </h4>
+              <a
+                href="tel:+94767156072"
+                className="inline-flex items-center text-green-700 hover:text-green-800 transition-colors duration-200 bg-green-50 hover:bg-green-100 px-4 py-2 rounded-full"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                <span>+94 76 715 6072</span>
+              </a>
+            </div>
           </div>
 
           <div className="text-center bg-stone-50 rounded-xl p-6">

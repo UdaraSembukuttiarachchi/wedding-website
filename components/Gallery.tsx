@@ -141,6 +141,11 @@ const Gallery: React.FC = () => {
                 index === currentImage 
                   ? 'ring-4 ring-green-500 ring-opacity-60' 
                   : 'hover:ring-2 hover:ring-stone-300'
+              } ${
+                // Center the last item if it's alone in the row (odd number of items on mobile only)
+                images.length % 2 === 1 && index === images.length - 1 
+                  ? 'col-span-2 md:col-span-1 justify-self-center md:justify-self-stretch max-w-[calc(50%-0.5rem)] md:max-w-none' 
+                  : ''
               }`}
               aria-label={`View ${image.alt}`}
             >

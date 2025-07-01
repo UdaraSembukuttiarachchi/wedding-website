@@ -1,6 +1,6 @@
 "use client"; // Only needed if using App Router
 import React, { useState, useEffect } from "react";
-import { Heart, MapPin, Clock } from "lucide-react";
+import { Heart } from "lucide-react";
 
 interface TimeLeft {
   days: number;
@@ -16,6 +16,8 @@ const WeddingLanding: React.FC = () => {
     minutes: 0,
     seconds: 0,
   });
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); 
 
   useEffect(() => {
     const weddingDate = new Date("2026-01-10T19:00:00");
@@ -43,29 +45,60 @@ const WeddingLanding: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-stone-50">
       {/* Navigation */}
       <nav className="absolute top-0 w-full z-20 px-6 py-4">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="text-xl font-light text-white tracking-wider">
-            Pansilu & Udara
-          </div>
-          <div className="hidden md:flex space-x-8 text-white font-light">
-            <a href="#story" className="hover:text-amber-200 transition-colors">
-              Our Story
-            </a>
-            <a
-              href="#gallery"
-              className="hover:text-amber-200 transition-colors"
-            >
-              Gallery
-            </a>
-            <a
-              href="#details"
-              className="hover:text-amber-200 transition-colors"
-            >
-              Wedding Details
-            </a>
-          </div>
-        </div>
-      </nav>
+  <div className="max-w-6xl mx-auto flex justify-between items-center">
+    {/* Brand */}
+    <div className="text-xl font-light text-white tracking-wider">
+      Pansilu & Udara
+    </div>
+
+    {/* Desktop Nav */}
+    <div className="hidden md:flex space-x-8 text-white font-light">
+      <a href="#story" className="hover:text-amber-200 transition-colors">
+        Our Story
+      </a>
+      <a href="#gallery" className="hover:text-amber-200 transition-colors">
+        Gallery
+      </a>
+      <a href="#details" className="hover:text-amber-200 transition-colors">
+        Wedding Details
+      </a>
+    </div>
+
+    {/* Mobile Hamburger */}
+    <div className="md:hidden">
+      <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-white focus:outline-none">
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {mobileMenuOpen ? (
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          ) : (
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          )}
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {/* Mobile Nav Menu */}
+  {mobileMenuOpen && (
+    <div className="md:hidden mt-4 space-y-4 text-white text-center font-light bg-stone-900/80 rounded-lg py-4">
+      <a href="#story" className="block hover:text-amber-200 transition-colors">
+        Our Story
+      </a>
+      <a href="#gallery" className="block hover:text-amber-200 transition-colors">
+        Gallery
+      </a>
+      <a href="#details" className="block hover:text-amber-200 transition-colors">
+        Wedding Details
+      </a>
+    </div>
+  )}
+</nav>
 
       {/* Combined Hero and Welcome Section */}
       <div className="relative min-h-screen flex flex-col overflow-hidden">
@@ -176,12 +209,13 @@ const WeddingLanding: React.FC = () => {
 
             {/* Wedding Date */}
             <div className="mb-8 animate-slide-up">
-              <p className="text-xl md:text-2xl lg:text-3xl font-light text-amber-300 italic mb-6 drop-shadow-lg">
+            <p className="text-base md:text-lg lg:text-xl font-light text-amber-300 italic mb-6 drop-shadow-lg">
                 Saturday, 10th January 2026
               </p>
+              <br /><br /><br />
 
               {/* Wedding Details */}
-              <div className="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-8 text-white mb-8">
+              {/* <div className="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-8 text-white mb-8">
                 <div className="flex items-center space-x-2">
                   <Clock className="w-4 h-4 md:w-5 md:h-5 text-amber-400" />
                   <span className="text-base md:text-lg font-light drop-shadow-lg">
@@ -195,7 +229,7 @@ const WeddingLanding: React.FC = () => {
                     Eagles Lagoon View, Katunayake
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Countdown Timer - Mobile Responsive Single Line */}
