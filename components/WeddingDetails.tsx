@@ -45,13 +45,13 @@ const WeddingDetails: React.FC = () => {
       id="details"
     >
       <div className="max-w-6xl mx-auto">
-        {/* Clean Header */}
+        {/* Clean Header - Enhanced Visibility */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-serif text-stone-800 mb-4 tracking-wide">
+          <h2 className="text-5xl md:text-6xl font-serif text-white mb-4 tracking-wide drop-shadow-lg" style={{ textShadow: '1px 1px 1px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.4)' }}>
             Wedding Details
           </h2>
-          <div className="w-20 h-0.5 bg-green-600 mx-auto mb-6"></div>
-          <p className="text-lg text-stone-600 max-w-2xl mx-auto font-serif">
+          <div className="w-20 h-0.5 bg-white mx-auto mb-6 drop-shadow-md"></div>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto font-serif font-semibold drop-shadow-md tracking-wide">
             All the important information for our special celebration
           </p>
         </div>
@@ -131,7 +131,7 @@ const WeddingDetails: React.FC = () => {
             <h3 className="text-2xl font-light text-stone-800">Get in Touch</h3>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-8 mb-8 sm:items-center">
+          <div className="grid sm:grid-cols-3 gap-4 mb-8 sm:items-center max-w-2xl mx-auto">
             {/* Pansilu's Contact */}
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -151,7 +151,7 @@ const WeddingDetails: React.FC = () => {
 
             {/* Separator Line */}
             <div className="hidden sm:flex items-center justify-center">
-              <div className="w-px h-24 bg-stone-300"></div>
+              <div className="w-px h-20 bg-stone-300"></div>
             </div>
             
             {/* Mobile Separator */}

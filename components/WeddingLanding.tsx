@@ -17,7 +17,7 @@ const WeddingLanding: React.FC = () => {
     seconds: 0,
   });
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const weddingDate = new Date("2026-01-10T19:00:00");
@@ -45,73 +45,122 @@ const WeddingLanding: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-stone-50">
       {/* Navigation */}
       <nav className="absolute top-0 w-full z-20 px-6 py-4">
-  <div className="max-w-6xl mx-auto flex justify-between items-center">
-    {/* Brand */}
-    <div className="text-xl font-light text-white tracking-wider">
-      Pansilu & Udara
-    </div>
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          {/* Brand */}
+          <div className="text-xl font-light text-white tracking-widest">
+            Pansilu & Udara
+          </div>
 
-    {/* Desktop Nav */}
-    <div className="hidden md:flex space-x-8 text-white font-light">
-      <a href="#story" className="hover:text-amber-200 transition-colors">
-        Our Story
-      </a>
-      <a href="#gallery" className="hover:text-amber-200 transition-colors">
-        Gallery
-      </a>
-      <a href="#details" className="hover:text-amber-200 transition-colors">
-        Wedding Details
-      </a>
-    </div>
+          {/* Desktop Nav */}
+          <div className="hidden md:flex space-x-8 text-white tracking-wide font-light">
+            <a href="#story" className="hover:text-amber-200 transition-colors">
+              Our Story
+            </a>
+            <a
+              href="#gallery"
+              className="hover:text-amber-200 transition-colors"
+            >
+              Gallery
+            </a>
+            <a
+              href="#details"
+              className="hover:text-amber-200 transition-colors"
+            >
+              Wedding Details
+            </a>
+          </div>
 
-    {/* Mobile Hamburger */}
-    <div className="md:hidden">
-      <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-white focus:outline-none">
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {mobileMenuOpen ? (
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          ) : (
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          )}
-        </svg>
-      </button>
-    </div>
-  </div>
+          {/* Mobile Hamburger */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-white focus:outline-none"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {mobileMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
 
-  {/* Mobile Nav Menu */}
-  {mobileMenuOpen && (
-    <div className="md:hidden mt-4 space-y-4 text-white text-center font-light bg-stone-900/80 rounded-lg py-4">
-      <a href="#story" className="block hover:text-amber-200 transition-colors">
-        Our Story
-      </a>
-      <a href="#gallery" className="block hover:text-amber-200 transition-colors">
-        Gallery
-      </a>
-      <a href="#details" className="block hover:text-amber-200 transition-colors">
-        Wedding Details
-      </a>
-    </div>
-  )}
-</nav>
+        {/* Mobile Nav Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-4 space-y-4 text-white text-center font-light bg-stone-900/80 rounded-lg py-4">
+            <a
+              href="#story"
+              className="block hover:text-amber-200 transition-colors"
+            >
+              Our Story
+            </a>
+            <a
+              href="#gallery"
+              className="block hover:text-amber-200 transition-colors"
+            >
+              Gallery
+            </a>
+            <a
+              href="#details"
+              className="block hover:text-amber-200 transition-colors"
+            >
+              Wedding Details
+            </a>
+          </div>
+        )}
+      </nav>
 
       {/* Combined Hero and Welcome Section */}
       <div className="relative min-h-screen flex flex-col overflow-hidden">
-        {/* Background Image */}
+        {/* Enhanced Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-[55%_45%] bg-no-repeat"
           style={{
             backgroundImage: `url('/bg-img.JPG')`,
+            backgroundAttachment: 'fixed',
+            imageRendering: 'crisp-edges',
+            filter: 'contrast(0.6) brightness(1.2) saturate(1.2)',
+            transform: 'scale(1.02)',
           }}
-        ></div>
+        >
+          {/* Additional image enhancement layer */}
+          <div 
+            className="absolute inset-0 bg-cover bg-[55%_45%] bg-no-repeat mix-blend-overlay opacity-20"
+            style={{
+              backgroundImage: `url('/bg-img.JPG')`,
+              filter: 'contrast(1.3) brightness(0.9) saturate(1.2)',
+            }}
+          />
+        </div>
 
-        {/* Background Image Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-stone-900/40 via-amber-900/30 to-stone-900/60"></div>
+        {/* Enhanced Background Image Overlay with better gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-900/50 via-amber-700/15 to-stone-900/70"></div>
+        
+        {/* Additional sharpening overlay */}
+        <div 
+          className="absolute inset-0 opacity-10 mix-blend-overlay"
+          style={{
+            background: 'radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.1) 100%)',
+          }}
+        />
 
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
@@ -172,70 +221,54 @@ const WeddingLanding: React.FC = () => {
         </div>
 
         {/* Main Hero Content */}
-        <div className="relative z-10 flex-1 flex items-center justify-center px-6 py-20">
+        <div className="relative z-10 flex-1 flex items-center justify-center px-6 py-18 md:py-10 lg:py-25">
           <div className="text-center max-w-4xl mx-auto">
             {/* Couple Names */}
             <div className="mb-6 animate-fade-in">
               <h1
-                className="text-8xl md:text-6xl lg:text-7xl text-white mb-4 tracking-wide drop-shadow-lg"
+                className="text-8xl md:text-6xl lg:text-8xl text-white/80 mb-4 tracking-wide drop-shadow-2xl"
                 style={{
                   fontFamily: "Dancing Script, Brush Script MT, cursive",
+                  textShadow: '0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)',
                 }}
               >
                 Pansilu
               </h1>
               <div className="flex items-center justify-center mb-4">
-                <div className="w-12 md:w-16 h-px bg-amber-300"></div>
-                <Heart className="mx-4 text-amber-400 w-5 h-5 md:w-6 md:h-6 animate-pulse drop-shadow-lg" />
-                <div className="w-12 md:w-16 h-px bg-amber-300"></div>
+                <div className="w-12 md:w-16 h-px bg-amber-300 shadow-lg"></div>
+                <Heart className="mx-4 text-amber-400 w-5 h-5 md:w-6 md:h-6 animate-pulse drop-shadow-2xl" />
+                <div className="w-12 md:w-16 h-px bg-amber-300 shadow-lg"></div>
               </div>
-              <p
-                className="text-4xl md:text-3xl lg:text-4xl text-amber-200 italic mb-4 drop-shadow-lg"
-                style={{
-                  fontFamily: "Dancing Script, Brush Script MT, cursive",
-                }}
-              >
-                &
-              </p>
+
               <h1
-                className="text-8xl md:text-6xl lg:text-7xl text-white tracking-wide drop-shadow-lg"
+                className="text-8xl md:text-6xl lg:text-8xl text-white/80 tracking-wide drop-shadow-2xl"
                 style={{
                   fontFamily: "Dancing Script, Brush Script MT, cursive",
+                  textShadow: '0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)',
                 }}
               >
                 Udara
               </h1>
             </div>
+            <br />
+            <br />
+            <br />
 
             {/* Wedding Date */}
             <div className="mb-8 animate-slide-up">
-            <p className="text-base md:text-lg lg:text-xl font-light text-amber-300 italic mb-6 drop-shadow-lg">
-                Saturday, 10th January 2026
+              <p className="text-xl md:text-2xl lg:text-4xl font-semibold text-amber-300 italic mb-2 drop-shadow-2xl tracking-wide">
+                10 . 01. 2026
               </p>
-              <br /><br /><br />
-
-              {/* Wedding Details */}
-              {/* <div className="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-8 text-white mb-8">
-                <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4 md:w-5 md:h-5 text-amber-400" />
-                  <span className="text-base md:text-lg font-light drop-shadow-lg">
-                    7:00 PM onwards
-                  </span>
-                </div>
-                <div className="hidden md:block w-px h-6 bg-white/30"></div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 md:w-5 md:h-5 text-amber-400" />
-                  <span className="text-base md:text-lg font-light drop-shadow-lg">
-                    Eagles Lagoon View, Katunayake
-                  </span>
-                </div>
-              </div> */}
+              <p className="text-xl md:text-2xl lg:text-2xl leading-none font-semibold text-white/80 italic drop-shadow-2xl">
+                Save the date
+              </p>
+              <br />
             </div>
 
             {/* Countdown Timer - Mobile Responsive Single Line */}
             <div className="mb-8 animate-slide-up">
               <div className="grid grid-cols-4 gap-2 md:gap-6 max-w-xs sm:max-w-sm md:max-w-lg mx-auto">
-                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-4">
+                <div className="text-center bg-white/15 backdrop-blur-md rounded-lg p-2 md:p-4 border border-white/20 shadow-xl">
                   <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.days}
                   </div>
@@ -243,7 +276,7 @@ const WeddingLanding: React.FC = () => {
                     Days
                   </div>
                 </div>
-                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-4">
+                <div className="text-center bg-white/15 backdrop-blur-md rounded-lg p-2 md:p-4 border border-white/20 shadow-xl">
                   <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.hours}
                   </div>
@@ -251,7 +284,7 @@ const WeddingLanding: React.FC = () => {
                     Hours
                   </div>
                 </div>
-                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-4">
+                <div className="text-center bg-white/15 backdrop-blur-md rounded-lg p-2 md:p-4 border border-white/20 shadow-xl">
                   <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.minutes}
                   </div>
@@ -259,7 +292,7 @@ const WeddingLanding: React.FC = () => {
                     Mins
                   </div>
                 </div>
-                <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-2 md:p-4">
+                <div className="text-center bg-white/15 backdrop-blur-md rounded-lg p-2 md:p-4 border border-white/20 shadow-xl">
                   <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.seconds}
                   </div>
@@ -272,7 +305,7 @@ const WeddingLanding: React.FC = () => {
 
             {/* RSVP Button */}
             <div className="animate-bounce-in">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-light tracking-wider transition-all duration-300 hover:shadow-xl hover:scale-105 transform">
+              <button className="bg-lime-700 hover:bg-lime-900 text-white px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-light tracking-wider rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 transform border border-white/50 backdrop-blur-sm">
                 RSVP
               </button>
             </div>
@@ -280,7 +313,7 @@ const WeddingLanding: React.FC = () => {
         </div>
 
         {/* Welcome Message Section - Now Integrated */}
-        <div className="relative z-10 bg-white/95 backdrop-blur-sm mx-6 mb-8 rounded-lg shadow-lg">
+        <div className="relative z-10 bg-white/95 backdrop-blur-sm mx-6 mb-8 rounded-lg shadow-2xl border border-white/50">
           <div className="py-12 md:py-16 px-6">
             <div className="max-w-3xl mx-auto text-center">
               <div className="mb-6">
@@ -345,6 +378,19 @@ const WeddingLanding: React.FC = () => {
 
         .animate-bounce-in {
           animation: bounce-in 1s ease-out 0.6s both;
+        }
+
+        /* Enhanced image rendering */
+        @supports (image-rendering: -webkit-optimize-contrast) {
+          .bg-cover {
+            image-rendering: -webkit-optimize-contrast;
+          }
+        }
+        
+        @supports (image-rendering: optimizeQuality) {
+          .bg-cover {
+            image-rendering: optimizeQuality;
+          }
         }
       `}</style>
     </div>

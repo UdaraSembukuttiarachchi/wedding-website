@@ -8,7 +8,8 @@ const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center">
           <p className="text-green-100 text-sm font-light tracking-wide">
-            Developed by Udara Sembukuttiarachchi. All rights reserved.
+            Developed by Udara Sembukuttiarachchi.{' '}
+            <span className="block sm:inline">All rights reserved.</span>
           </p>
         </div>
       </div>
