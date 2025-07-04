@@ -63,10 +63,16 @@ const WeddingLanding: React.FC = () => {
               Gallery
             </a>
             <a
+              href="#schedule"
+              className="hover:text-amber-200 transition-colors"
+            >
+              Schedule
+            </a>
+            <a
               href="#details"
               className="hover:text-amber-200 transition-colors"
             >
-              Wedding Details
+              Details
             </a>
           </div>
 
@@ -119,10 +125,16 @@ const WeddingLanding: React.FC = () => {
               Gallery
             </a>
             <a
+              href="#schedule"
+              className="block hover:text-amber-200 transition-colors"
+            >
+              Schedule
+            </a>
+            <a
               href="#details"
               className="block hover:text-amber-200 transition-colors"
             >
-              Wedding Details
+              Details
             </a>
           </div>
         )}
