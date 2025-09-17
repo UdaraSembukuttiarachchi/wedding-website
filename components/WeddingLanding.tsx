@@ -1,6 +1,7 @@
 "use client"; // Only needed if using App Router
 import React, { useState, useEffect } from "react";
 import { Heart } from "lucide-react";
+import RSVPModal from './RsvpModal'
 
 interface TimeLeft {
   days: number;
@@ -317,9 +318,7 @@ const WeddingLanding: React.FC = () => {
 
             {/* RSVP Button */}
             <div className="animate-bounce-in">
-              <button className="bg-lime-700 hover:bg-lime-900 text-white px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-light tracking-wider rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 transform border border-white/50 backdrop-blur-sm">
-                RSVP
-              </button>
+              <RSVPModal />
             </div>
           </div>
         </div>
