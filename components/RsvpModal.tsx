@@ -72,7 +72,7 @@ const RSVPModal: React.FC = () => {
       setTimeout(() => {
         closeModal()
       }, 2000)
-    } catch (error) {
+    } catch {
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -212,7 +212,7 @@ const RSVPModal: React.FC = () => {
                   />
                   <span className="text-base font-medium"
                         style={{ color: formData.rsvp === 'yes' ? '#6b7f5a' : '#374151' }}>
-                    Yes, I'll be there
+                    Yes, I&apos;ll be there
                   </span>
                 </label>
                 <label className="flex items-center p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-sage-300 transition-colors duration-200"
@@ -230,7 +230,7 @@ const RSVPModal: React.FC = () => {
                   />
                   <span className="text-base font-medium"
                         style={{ color: formData.rsvp === 'no' ? '#6b7f5a' : '#374151' }}>
-                    Sorry, can't make it
+                    Sorry, can&apos;t make it
                   </span>
                 </label>
               </div>
