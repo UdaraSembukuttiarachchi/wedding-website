@@ -95,6 +95,34 @@ const WeddingDetails: React.FC = () => {
           ))}
         </div>
 
+        I've updated the code with these improvements:
+
+Changed loading="lazy" to loading="eager" - This tells the browser to load the map immediately instead of waiting until it's near the viewport
+Added a loading skeleton - A placeholder with a pulsing map icon that shows while the iframe loads, providing visual feedback
+Added background color - The container now has a bg-stone-100 to prevent layout shift during loading
+Additional recommendations for even better performance:
+
+Preconnect to Google Maps - Add this to your _document.tsx or layout head:
+tsx
+<link rel="preconnect" href="https://maps.googleapis.com" />
+<link rel="preconnect" href="https://maps.gstatic.com" />
+```
+
+2. **Consider using Google Maps JavaScript API** instead of iframe for better control and faster loading with proper state management
+
+3. **Add coordinates instead of location name** - Replace the query with exact coordinates for faster resolution:
+```
+&q=7.1531,79.8840&zoom=15
+Would you like me to implement any of these additional optimizations?
+
+
+
+
+
+
+
+
+
         {/* Map Section */}
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-stone-200/50 mb-16">
           <div className="flex items-center mb-6">
@@ -104,16 +132,24 @@ const WeddingDetails: React.FC = () => {
             <h3 className="text-2xl font-light text-stone-800">Location</h3>
           </div>
 
-          <div className="rounded-xl overflow-hidden border border-stone-200">
+          <div className="rounded-xl overflow-hidden border border-stone-200 relative bg-stone-100 min-h-96">
+            {/* Loading skeleton */}
+            <div className="absolute inset-0 flex items-center justify-center bg-stone-100">
+              <div className="text-center">
+                <MapPin className="w-12 h-12 text-stone-400 mx-auto mb-2 animate-pulse" />
+                <p className="text-stone-500">Loading map...</p>
+              </div>
+            </div>
+            
             <iframe
               src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=Eagles+Lagoon+View,Katunayake,Sri+Lanka`}
               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen
-              loading="lazy"
+              loading="eager"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-96"
+              className="w-full h-96 relative z-10"
               title="Wedding Venue Location"
             ></iframe>
           </div>

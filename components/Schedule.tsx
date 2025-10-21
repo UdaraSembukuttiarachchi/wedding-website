@@ -20,12 +20,12 @@ const Schedule: React.FC<ScheduleProps> = ({
 }) => {
   const defaultScheduleItems: ScheduleItem[] = [
     { 
-      time: "5:00 PM", 
+      time: "5:10 PM", 
       event: "Poruwa Ceremony", 
       defaultImageUrl: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&h=400&fit=crop&crop=center"
     },
     { 
-      time: "5:30 PM", 
+      time: "5:45 PM", 
       event: "Registration", 
       defaultImageUrl: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=400&fit=crop&crop=center"
     },
