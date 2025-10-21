@@ -266,13 +266,15 @@ const WeddingLanding: React.FC = () => {
             <br />
             <br />
             <br />
+            <br />
+            <br />
 
             {/* Wedding Date */}
             <div className="mb-8 animate-slide-up">
               <p className="text-xl md:text-2xl lg:text-4xl font-semibold text-amber-300 italic mb-2 drop-shadow-2xl tracking-wide">
                 10 . 01. 2026
               </p>
-              <p className="text-xl md:text-2xl lg:text-2xl leading-none font-semibold text-white/80 italic drop-shadow-2xl">
+              <p className="text-l md:text-xl lg:text-2xl leading-none font-semibold text-white/80 italic drop-shadow-2xl">
                 Save the date
               </p>
               <br />
