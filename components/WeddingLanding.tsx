@@ -1,7 +1,7 @@
 "use client"; // Only needed if using App Router
 import React, { useState, useEffect } from "react";
 import { Heart } from "lucide-react";
-import RSVPModal from './RsvpModal'
+import RSVPModal from "./RsvpModal";
 
 interface TimeLeft {
   days: number;
@@ -19,12 +19,11 @@ const WeddingLanding: React.FC = () => {
   });
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const img = new Image();
-    img.src = '/bg-img.JPG';
-    img.onload = () => setImageLoaded(true);
+    img.src = "/bg-img.JPG";
+    // Preload happens in background, no need to track completion
   }, []);
 
   useEffect(() => {
@@ -155,30 +154,31 @@ const WeddingLanding: React.FC = () => {
           className="absolute inset-0 bg-cover bg-[55%_45%] bg-no-repeat"
           style={{
             backgroundImage: `url('/bg-img.JPG')`,
-            backgroundAttachment: 'fixed',
-            imageRendering: 'crisp-edges',
-            filter: 'contrast(0.6) brightness(1.2) saturate(1.2)',
-            transform: 'scale(1.02)',
+            backgroundAttachment: "fixed",
+            imageRendering: "crisp-edges",
+            filter: "contrast(0.6) brightness(1.2) saturate(1.2)",
+            transform: "scale(1.02)",
           }}
         >
           {/* Additional image enhancement layer */}
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-[55%_45%] bg-no-repeat mix-blend-overlay opacity-20"
             style={{
               backgroundImage: `url('/bg-img.JPG')`,
-              filter: 'contrast(1.3) brightness(0.9) saturate(1.2)',
+              filter: "contrast(1.3) brightness(0.9) saturate(1.2)",
             }}
           />
         </div>
 
         {/* Enhanced Background Image Overlay with better gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-stone-900/50 via-amber-700/15 to-stone-900/70"></div>
-        
+
         {/* Additional sharpening overlay */}
-        <div 
+        <div
           className="absolute inset-0 opacity-10 mix-blend-overlay"
           style={{
-            background: 'radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.1) 100%)',
+            background:
+              "radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.1) 100%)",
           }}
         />
 
@@ -249,7 +249,8 @@ const WeddingLanding: React.FC = () => {
                 className="text-8xl md:text-6xl lg:text-8xl text-white/80 mb-4 tracking-wide drop-shadow-2xl"
                 style={{
                   fontFamily: "Dancing Script, Brush Script MT, cursive",
-                  textShadow: '0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)',
+                  textShadow:
+                    "0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)",
                 }}
               >
                 Pansilu
@@ -264,7 +265,8 @@ const WeddingLanding: React.FC = () => {
                 className="text-8xl md:text-6xl lg:text-8xl text-white/80 tracking-wide drop-shadow-2xl"
                 style={{
                   fontFamily: "Dancing Script, Brush Script MT, cursive",
-                  textShadow: '0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)',
+                  textShadow:
+                    "0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)",
                 }}
               >
                 Udara
@@ -406,7 +408,7 @@ const WeddingLanding: React.FC = () => {
             image-rendering: -webkit-optimize-contrast;
           }
         }
-        
+
         @supports (image-rendering: optimizeQuality) {
           .bg-cover {
             image-rendering: optimizeQuality;
