@@ -19,6 +19,13 @@ const WeddingLanding: React.FC = () => {
   });
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = '/bg-img.JPG';
+    img.onload = () => setImageLoaded(true);
+  }, []);
 
   useEffect(() => {
     const weddingDate = new Date("2026-01-10T19:00:00");

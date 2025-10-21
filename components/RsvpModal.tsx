@@ -131,6 +131,7 @@ const RSVPModal: React.FC = () => {
             {/* Name Input */}
             <div className="space-y-3">
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <br />
                 Name on the invitation
               </label>
               <input
@@ -139,10 +140,13 @@ const RSVPModal: React.FC = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-all duration-200 text-base placeholder-gray-400"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-all duration-200 text-base placeholder-gray-400 text-gray-900"
                 placeholder="Enter your name"
                 required
-                style={{ borderColor: formData.name ? '#9ca3af' : '#e5e7eb' }}
+                style={{ 
+                  borderColor: formData.name ? '#9ca3af' : '#e5e7eb',
+                  color: '#111827'
+                }}
               />
             </div>
 
