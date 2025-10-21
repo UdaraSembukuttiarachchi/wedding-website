@@ -281,7 +281,7 @@ const WeddingLanding: React.FC = () => {
             {/* Countdown Timer - Mobile Responsive Single Line */}
             <div className="mb-8 animate-slide-up">
               <div className="grid grid-cols-4 gap-2 md:gap-6 max-w-xs sm:max-w-sm md:max-w-lg mx-auto">
-                <div className="text-center backdrop-blur-md rounded-lg p-2 md:p-4 border border-white/20 shadow-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)' }}>
+                <div className="text-center rounded-lg p-2 md:p-4 border border-white/30 shadow-xl countdown-box">
                   <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.days}
                   </div>
@@ -289,7 +289,7 @@ const WeddingLanding: React.FC = () => {
                     Days
                   </div>
                 </div>
-                <div className="text-center backdrop-blur-md rounded-lg p-2 md:p-4 border border-white/20 shadow-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)' }}>
+                <div className="text-center rounded-lg p-2 md:p-4 border border-white/30 shadow-xl countdown-box">
                   <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.hours}
                   </div>
@@ -297,7 +297,7 @@ const WeddingLanding: React.FC = () => {
                     Hours
                   </div>
                 </div>
-                <div className="text-center backdrop-blur-md rounded-lg p-2 md:p-4 border border-white/20 shadow-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)' }}>
+                <div className="text-center rounded-lg p-2 md:p-4 border border-white/30 shadow-xl countdown-box">
                   <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.minutes}
                   </div>
@@ -305,7 +305,7 @@ const WeddingLanding: React.FC = () => {
                     Mins
                   </div>
                 </div>
-                <div className="text-center backdrop-blur-md rounded-lg p-2 md:p-4 border border-white/20 shadow-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)' }}>
+                <div className="text-center rounded-lg p-2 md:p-4 border border-white/30 shadow-xl countdown-box">
                   <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white">
                     {timeLeft.seconds}
                   </div>
