@@ -19,11 +19,12 @@ const WeddingLanding: React.FC = () => {
   });
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const img = new Image();
     img.src = "/bg-img.JPG";
-    // Preload happens in background, no need to track completion
+    img.onload = () => setImageLoaded(true);
   }, []);
 
   useEffect(() => {
@@ -50,6 +51,24 @@ const WeddingLanding: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-stone-50">
+      {/* Loading Screen */}
+      {!imageLoaded && (
+        <div className="fixed inset-0 flex items-center justify-center bg-stone-900 z-50">
+          <div className="text-center">
+            <div className="w-16 h-16 border-4 border-amber-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p className="text-white text-xl font-light tracking-wide">
+              Loading...
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Main Content - Fade in when loaded */}
+      <div
+        className={`transition-opacity duration-700 ${
+          imageLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      ></div>
       {/* Navigation */}
       <nav className="absolute top-0 w-full z-20 px-6 py-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
