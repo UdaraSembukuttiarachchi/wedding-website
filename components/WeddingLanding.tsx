@@ -264,10 +264,16 @@ const WeddingLanding: React.FC = () => {
           <div className="text-center max-w-4xl mx-auto">
             {/* Couple Names */}
             <div className="mb-6 animate-fade-in">
+              <style>
+                {`
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+    `}
+              </style>
+
               <h1
                 className="text-8xl md:text-6xl lg:text-8xl text-white/80 mb-4 tracking-wide drop-shadow-2xl"
                 style={{
-                  fontFamily: "Dancing Script, Brush Script MT, cursive",
+                  fontFamily: "'Dancing Script', cursive",
                   textShadow:
                     "0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)",
                 }}
@@ -283,7 +289,7 @@ const WeddingLanding: React.FC = () => {
               <h1
                 className="text-8xl md:text-6xl lg:text-8xl text-white/80 tracking-wide drop-shadow-2xl"
                 style={{
-                  fontFamily: "Dancing Script, Brush Script MT, cursive",
+                  fontFamily: "'Dancing Script', cursive",
                   textShadow:
                     "0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)",
                 }}
@@ -366,9 +372,9 @@ const WeddingLanding: React.FC = () => {
               <p className="text-base md:text-lg leading-relaxed text-gray-600 font-light italic">
                 Welcome to our wedding website! We&#39;ve created this site as a
                 convenient and interactive way to share all of the important
-                details with you leading up to our wedding. We can&#39;t wait to
-                celebrate this exciting new chapter of our lives together with
-                you.
+                details with you leading up to our wedding. <br />
+                We can&#39;t wait to celebrate this exciting new chapter of our
+                lives together with you.
               </p>
             </div>
           </div>
