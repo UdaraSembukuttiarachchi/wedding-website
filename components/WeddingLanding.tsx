@@ -302,6 +302,7 @@ const WeddingLanding: React.FC = () => {
             <br />
             <br />
             <br />
+            <br />
 
             {/* Wedding Date */}
             <div className="mb-8 animate-slide-up">
@@ -312,7 +313,6 @@ const WeddingLanding: React.FC = () => {
                 Save the date
               </p>
             </div>
-            <br />
             <br />
 
             {/* Countdown Timer - Mobile Responsive Single Line */}
