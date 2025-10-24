@@ -266,7 +266,7 @@ const WeddingLanding: React.FC = () => {
             <div className="mb-6 animate-fade-in">
               <style>
                 {`
-      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
     `}
               </style>
 
@@ -311,7 +311,6 @@ const WeddingLanding: React.FC = () => {
               <p className="text-l md:text-xl lg:text-2xl leading-none font-semibold text-white/80 italic drop-shadow-2xl">
                 Save the date
               </p>
-              <br />
             </div>
             <br />
             <br />
