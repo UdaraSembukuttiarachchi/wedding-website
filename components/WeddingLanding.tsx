@@ -273,7 +273,7 @@ const WeddingLanding: React.FC = () => {
               <h1
                 className="text-8xl md:text-6xl lg:text-8xl text-white/80 mb-4 tracking-wide drop-shadow-2xl"
                 style={{
-                  fontFamily: "'Brush Script MT', cursive",
+                  fontFamily: "'Arizonia', cursive",
                   textShadow:
                     "0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)",
                 }}
@@ -289,7 +289,7 @@ const WeddingLanding: React.FC = () => {
               <h1
                 className="text-8xl md:text-6xl lg:text-8xl text-white/80 tracking-wide drop-shadow-2xl"
                 style={{
-                  fontFamily: "'Brush Script MT', cursive",
+                  fontFamily: "'Arizonia', cursive",
                   textShadow:
                     "0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2)",
                 }}
@@ -313,6 +313,8 @@ const WeddingLanding: React.FC = () => {
               </p>
               <br />
             </div>
+            <br />
+            <br />
 
             {/* Countdown Timer - Mobile Responsive Single Line */}
             <div className="mb-8 animate-slide-up">
